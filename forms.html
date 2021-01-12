@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Forms</title>    
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script src="js/jquery-3.5.1.js"></script>
+        <script src="js/scripts.js"></script>
+        
+    </head>
+
+    <body>
+        <div class="flex-container">
+            <h1>Gradient Generator</h1>
+            <p>Enter some info below to generate CSS code that designs a gradient</p>
+        
+       
+            <form id="formOne">
+                <div class="form-group">
+                    <label for ="type1">Radial or Linear?</label> <br>
+                    <input id ="type0A" class="form-control" type="radio" name="first" value="linear">
+                    <label for="type0A"> Linear</label>
+                    <input id ="type0B" class="form-control" type="radio" name="second" value="radial">
+                    <label for="type0B"> Radial</label>
+                </div>
+
+                <div class="form-group-hidden">
+                    <label for ="type1A">Shape? (Circle or Ellipse)</label>
+                    <input id ="type1A" class="form-control" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for ="type2">Name of Gradient?</label>
+                    <input id ="type2" class="form-control" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for ="type3">Height of Gradient? (enter with unit of choice)</label>
+                    <input id ="type3" class="form-control" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for ="type4">Width of Gradient? (enter with unit of choice)</label>
+                    <input id ="type4" class="form-control" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for ="type5">First hexadecimal color?</label>
+                    <input id ="type5" class="form-control" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for ="type6">Second hexadecimal color?</label>
+                    <input id ="type6" class="form-control" type="text">
+                </div>
+
+                <button type="submit" class="submit" name="gradient">Show the gradient!</button>
+                <!-- <input type="button" onclick="newFunction()" value="Reset form"> -->
+                <div id="reset">
+                    <button type="reset" class="reset" name="reset">Reset</button>
+                </div>
+
+            </form>
+
+            
+        
+            <div id="code">
+                <h2>Your Gradient:</h2>
+                <p>
+                    .<span class="type2"></span> { <br>
+                        height: <span class="type3"></span>; <br>
+                        width: <span class="type4"></span>;<br>
+                        background-image: <span class="type1"></span>-gradient(<span class="type5"></span>, <span class="type6"></span>); <br>
+                    }
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

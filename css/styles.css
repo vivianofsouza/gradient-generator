@@ -39,13 +39,6 @@ button:focus {
     transition: width 0.4s ease-in-out;
 }
 
-/* .form-group input[type=text]:focus{
-    background-color: none; 
-    width: 100%; 
-
-} */
-
-
 #type1 {
     padding: 100px; 
     width: 5%; 

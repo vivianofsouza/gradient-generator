@@ -25,8 +25,6 @@ $(document).ready(function() {
 
     
     $("#formOne").submit(function(event) {
-        // gradTypeInput = $("input#type0A").val(); 
-        // console.log(gradTypeInput);
         nameInput = $("input#type2").val();
         heightInput = $("input#type3").val(); 
         widthInput = $("input#type4").val(); 
@@ -39,26 +37,16 @@ $(document).ready(function() {
             $(".type5").append("circle, ");
             shapeInput = shapeInput.concat(", ", color1Input); 
             console.log(shapeInput);
-            // color1Input = shapeInput + ", #" + color1Input; 
         } else if(shapeInput === "ellipse") {
             $(".type5").append("ellipse, ");
             shapeInput = shapeInput.concat(", ", color1Input);
             console.log(shapeInput);
-            // color1Input = shapeInput + ", #" + color1Input; 
         }
 
         if(gradTypeInput === "radial") {
-           
-            // $(".type5").append("circle, #");
-            // $("p").css({"background-image": "radial-gradient(" + ('input#type7').val() + ", #" + $('input#type5').val() + ", #" + $('input#type6').val() + ")"});
-            
             $("html").css({"background-image": "radial-gradient(" + shapeInput + ", " + $('input#type6').val() + ")"});
-           
         } else {
-            
-           
             $("html").css({"background-image": "linear-gradient(" +  $('input#type5').val() + ", " + $('input#type6').val() + ")"});
-           
         }
 
         $(".type1").append(gradTypeInput);
